@@ -1,0 +1,394 @@
+/* ==== GLOBAL STYLES ==== */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* ==== HEADER ==== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  gap: 15px;
+}
+
+.left-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo {
+  height: 80px;
+  border-radius: 10px;
+}
+
+.brand {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.brand-title h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  color: #6d4c41;
+}
+
+.brand-title h5 {
+  margin: 0;
+  font-size: 1rem;
+  color: #888;
+  font-weight: normal;
+}
+
+.brand p {
+  margin: 2px 0;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.tagline {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+/* ==== ORDER BUTTON IN HEADER ==== */
+.header-btn {
+  padding: 10px 16px;
+  background-color: #a25c2f;
+  color: white;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.header-btn:hover {
+  background-color: #754c24;
+}
+
+/* ==== PRODUCT CATEGORIES ==== */
+.category {
+  margin-top: 50px;
+  border-top: 1px solid #e0e0e0;
+  padding-top: 20px;
+}
+
+.category h2 {
+  margin-bottom: 15px;
+  color: #4e342e;
+  font-size: 1.4rem;
+}
+
+/* ==== PRODUCT CARDS ==== */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card img {
+  height: 150px;
+  width: 100%;
+  object-fit: fill;
+  border-radius: 8px;
+}
+
+.card h3 {
+  font-size: 1rem;
+  margin: 10px 0 5px;
+}
+
+.card p {
+  font-weight: bold;
+  color: #2e7d32;
+}
+
+/* ==== FOOTER ==== */
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  padding: 20px;
+  border-top: 1px solid #ddd;
+  font-size: 16px;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.footer-right {
+  text-align: right;
+}
+
+.footer-left,
+.footer-right {
+  flex: 1;
+  min-width: 280px;
+}
+
+.footer-left p,
+.footer-right p {
+  margin: 6px 0;
+  line-height: 1.6;
+}
+
+.footer .order-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #a25c2f;
+  color: #fff;
+  border: none;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.footer .order-btn:hover {
+  background-color: #754c24;
+}
+
+
+/* ==== ORDER FORM PAGE ==== */
+.form-box {
+  background-color: white;
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.form-box h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #8d3c02;
+}
+
+.form-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-box input,
+.form-box select,
+.form-box button {
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.form-box button {
+  background-color: #a25c2f;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.form-box button:hover {
+  background-color: #754c24;
+}
+
+/* ==== LOGO IN FORM PAGE ==== */
+.logo img {
+  display: block;
+  margin: 0 auto 20px;
+  height: 80px;
+  border-radius: 10px;
+}
+
+/* ==== RESPONSIVE DESIGN ==== */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .left-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .logo {
+    height: 70px;
+  }
+
+  .brand-title h1 {
+    font-size: 1.5rem;
+  }
+
+  .form-box {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  .card img {
+    height: 130px;
+  }
+
+  .header-btn {
+    align-self: flex-start;
+  }
+
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .footer-left,
+  .footer-right {
+    width: 100%;
+  }
+}
+
+/* note field */
+.note {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #6d4c41;
+  margin-top: 10px;
+}
+
+/* select items field */
+.checkbox-group {
+  margin-top: 20px;
+}
+
+.checkbox-group fieldset {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+}
+
+.checkbox-group legend {
+  font-weight: bold;
+  color: #5d4037;
+}
+
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.checkbox-group input[type="checkbox"] {
+  transform: scale(1.2);
+  margin-right: 8px;
+}
+
+.checkbox-group input[type="text"] {
+  flex: 1;
+  padding: 8px;
+  font-size: 0.9rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  resize: vertical;
+}
+
+.radio-group {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+  font-weight: 500;
+}
+
+.radio-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+
+/* ==== TESTIMONIALS CAROUSEL ==== */
+.testimonials {
+  margin: 60px 0;
+  padding: 20px;
+  background-color: #fffaf5;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.testimonials h2 {
+  color: #6d4c41;
+  margin-bottom: 20px;
+}
+
+.testimonial-card {
+  max-width: 600px;
+  margin: auto;
+  background-color: #ffffff;
+  padding: 20px;
+  border-left: 5px solid #a25c2f;
+  border-radius: 6px;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+  transition: all 0.5s ease;
+}
+
+.testimonial-card p {
+  font-style: italic;
+  font-size: 1.05rem;
+  margin-bottom: 12px;
+  color: #555;
+}
+
+.testimonial-card h4 {
+  font-weight: 500;
+  color: #8d3c02;
+}
