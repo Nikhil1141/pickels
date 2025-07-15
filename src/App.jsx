@@ -36,7 +36,7 @@ const App = () => {
     ],
     veg: [
       { name: 'Ginger Pickle (Sweet)', price: '₹ 349', img: sweetginger },
-      { name: 'Ginger Pickle (Hot)', price: '₹ 300', img: hotginger },
+      { name: 'Ginger Pickle (Hot)', price: '₹ 299', img: hotginger },
       { name: 'Tomato Pickle', price: '₹ 275', img: tomato },
       { name: 'Gongura Pickle', price: '₹ 275', img: gongura },
       { name: 'Gongura Pandumirchi Pickle', price: '₹ 349', img: pandumirchi },
