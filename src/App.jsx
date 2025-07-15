@@ -28,72 +28,72 @@ const App = () => {
 
   const products = {
     nonVeg: [
-      { name: 'Chicken Pickle (Boneless)', price: '₹ 650', img: chicken },
-      { name: 'Chicken Thokku Pickle (Boneless)', price: '₹ 650', img: thokku },
-      { name: 'Chicken Gongura Pickle (Boneless)', price: '₹ 650', img: chickenGongura },
-      { name: 'Mutton Pickle(Boneless)', price: '₹ 1100', img: mutton },
-      { name: 'Prawns Pickle', price: '₹ 1000', img: prawns },
+      { name: 'Chicken Pickle (Boneless)', price: '₹ 649', img: chicken },
+      { name: 'Chicken Thokku Pickle (Boneless)', price: '₹ 649', img: thokku },
+      { name: 'Chicken Gongura Pickle (Boneless)', price: '₹ 649', img: chickenGongura },
+      { name: 'Mutton Pickle(Boneless)', price: '₹ 1099', img: mutton },
+      { name: 'Prawns Pickle', price: '₹ 999', img: prawns },
     ],
     veg: [
-      { name: 'Ginger Pickle (Sweet)', price: '₹ 350', img: sweetginger },
+      { name: 'Ginger Pickle (Sweet)', price: '₹ 349', img: sweetginger },
       { name: 'Ginger Pickle (Hot)', price: '₹ 300', img: hotginger },
       { name: 'Tomato Pickle', price: '₹ 275', img: tomato },
       { name: 'Gongura Pickle', price: '₹ 275', img: gongura },
-      { name: 'Gongura Pandumirchi Pickle', price: '₹ 350', img: pandumirchi },
-      { name: 'Lemon Pickle', price: '₹ 275', img: lemon },
+      { name: 'Gongura Pandumirchi Pickle', price: '₹ 349', img: pandumirchi },
+      { name: 'Lemon Pickle', price: '₹ 275', img: lemon }
     ],
     powders: [
-      { name: 'Karivepaku (Curry Leaves) Podi', price: '₹ 300', img: karivepaku },
-      { name: 'Monaga Aaku Karam (Moringa Leaves)', price: '₹ 300', img: moringa },
-      { name: 'Flax Seeds Podi (Avisi Ginjala Karam)', price: '₹ 300', img: flax },
-      { name: 'Madupu Karam (Nalla Karam)', price: '₹ 300', img: madupuKaram },
-      { name: 'Nuvvula Karam (Sesama Karam)', price: '₹ 300', img: nuvvulaKaram },
+      { name: 'Karivepaku (Curry Leaves) Podi', price: '₹ 299', img: karivepaku },
+      { name: 'Monaga Aaku Karam (Moringa Leaves)', price: '₹ 299', img: moringa },
+      { name: 'Flax Seeds Podi (Avisi Ginjala Karam)', price: '₹ 299', img: flax },
+      { name: 'Madupu Karam (Nalla Karam)', price: '₹ 299', img: madupuKaram },
+      { name: 'Nuvvula Karam (Sesama Karam)', price: '₹ 299', img: nuvvulaKaram },
     ],
   };
 
 
 
   const testimonials = [
-  {
-    message: "Prompt delivery and very hygienic packaging. Highly recommended!",
-    name: "Aparna, Hyderabad",
-  },
-  {
-    message: "Loved the chicken pickle. Spicy and perfect with rice!",
-    name: "Sumitra, Guntur",
-  },
-  {
-    message: "The chicken pickle was absolutely delicious! Reminded me of home.",
-    name: "Parvathi, Guntur",
-  },
-  // {
-  //   message: "I gifted these pickles to my relatives — they all loved it!",
-  //   name: "Vikram, Chennai",
-  // }
-];
+    {
+      message: "Prompt delivery and very hygienic packaging. Highly recommended!",
+      name: "Aparna, Hyderabad",
+    },
+    {
+      message: "Loved the chicken pickle. Spicy and perfect with rice!",
+      name: "Sumitra, Guntur",
+    },
+    {
+      message: "The chicken pickle was absolutely delicious! Reminded me of home.",
+      name: "Parvathi, Guntur",
+    },
+    // {
+    //   message: "I gifted these pickles to my relatives — they all loved it!",
+    //   name: "Vikram, Chennai",
+    // }
+  ];
 
 
-const TestimonialCarousel = () => {
-  const [index, setIndex] = useState(0);
+  const TestimonialCarousel = () => {
+    const [index, setIndex] = useState(0);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex(prev => (prev + 1) % testimonials.length);
-    }, 3000); // 4s per testimonial
+    useEffect(() => {
+      const interval = setInterval(() => {
+        setIndex(prev => (prev + 1) % testimonials.length);
+      }, 3000); // 4s per testimonial
 
-    return () => clearInterval(interval);
-  }, []);
+      return () => clearInterval(interval);
+    }, []);
 
-  return (
-    <section className="testimonials">
-      <h2>💬 What Our Customers Say</h2>
-      <div className="testimonial-card">
-        <p>"{testimonials[index].message}"</p>
-        <h4>- {testimonials[index].name}</h4>
-      </div>
-    </section>
-  );
-};
+    return (
+      <section className="testimonials">
+        <h2>💬 What Our Customers Say</h2>
+        <div className="testimonial-card">
+          <p>"{testimonials[index].message}"</p>
+          <h4>- {testimonials[index].name}</h4>
+        </div>
+      </section>
+    );
+  };
 
 
   const renderCategory = (title, items) => (
@@ -129,6 +129,10 @@ const TestimonialCarousel = () => {
           </div>
           <Link to="/order" className="order-btn header-btn">Place Order</Link>
         </header>
+
+        <marquee className="marquee" behavior="scroll" direction="left" scrollamount="10">
+          🚚 Delivery charges are not included in the displayed prices and may vary by location. 💳 Please note: Only online payments are accepted; Cash on Delivery is not available.
+        </marquee>
 
         <Routes>
           <Route

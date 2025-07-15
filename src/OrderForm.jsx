@@ -112,7 +112,7 @@ const OrderForm = () => {
                         <button type="submit">Place Order</button>
                     </form>
                     <p className="note">Note: We will contact you to confirm your order and delivery details.</p>
-                    <p className="note"> "Kindly check your inbox or spam folder for a confirmation email from us after submission." </p>
+                    <p className="note"> "Kindly check your inbox or spam folder for submitted details." </p>
                 </div>
             </div>
         </div>

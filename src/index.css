@@ -261,8 +261,28 @@ a {
     padding: 20px;
   }
 
-  .card img {
+  /* .card img {
     height: 130px;
+  } */
+   .cards {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 16px;
+  }
+
+  .card {
+    padding: 10px;
+  }
+
+  .card img {
+    height: 120px;
+  }
+
+  .card h3 {
+    font-size: 0.95rem;
+  }
+
+  .card p {
+    font-size: 0.9rem;
   }
 
   .header-btn {
@@ -391,4 +411,15 @@ textarea {
 .testimonial-card h4 {
   font-weight: 500;
   color: #8d3c02;
+}
+
+/* marque */
+.marquee {
+  background-color: #fff3e0;
+  color: #8d3c02;
+  padding: 10px 0;
+  font-weight: bold;
+  font-size: 0.95rem;
+  border-top: 1px solid #f5deb3;
+  border-bottom: 1px solid #f5deb3;
 }
