@@ -57,7 +57,8 @@ const OrderForm = () => {
                                     <optgroup label="Non-Veg Pickles">
                                         <option value="Chicken Pickle (Boneless)">Chicken Pickle (Boneless)</option>
                                         <option value="Chicken Thokku Pickle (Boneless)">Chicken Thokku Pickle (Boneless)</option>
-                                        <option value="Mutton Gongura Pickle">Mutton Gongura Pickle</option>
+                                        <option value="Chicken Gongura Pickle (Boneless)">Chicken Gongura Pickle (Boneless)</option>
+                                        <option value="Mutton Pickle (Boneless)">Mutton Pickle (Boneless)</option>
                                         <option value="Prawns Pickle">Prawns Pickle</option>
                                     </optgroup>
 
@@ -67,12 +68,15 @@ const OrderForm = () => {
                                         <option value="Tomato Pickle">Tomato Pickle</option>
                                         <option value="Gongura Pickle">Gongura Pickle</option>
                                         <option value="Gongura Pandumirchi Pickle">Gongura Pandumirchi Pickle</option>
+                                        <option value="Lemon Pickle">Lemon Pickle</option>
                                     </optgroup>
 
                                     <optgroup label="Karampodi / Spice Powders">
                                         <option value="Karivepaku (Curry Leaves) Podi">Karivepaku (Curry Leaves) Podi</option>
                                         <option value="Monaga Aaku Karam (Moringa Leaves)">Monaga Aaku Karam (Moringa Leaves)</option>
                                         <option value="Flax Seeds Podi (Avisi Ginjala Karam)">Flax Seeds Podi (Avisi Ginjala Karam)</option>
+                                        <option value="Madupu Karam (Nalla Karam)">Madupu Karam (Nalla Karam)</option>
+                                        <option value="Flax Seeds Podi (Avisi Ginjala Karam)">Nuvvula Karam (Sesama Karam)</option>
                                     </optgroup>
                                 </select>
 
